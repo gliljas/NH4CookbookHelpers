@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="MappingRecipes"
+                   namespace="MappingRecipes.ComponentCollections">
+    <class name="Customer">
+        <id name="Id">
+            <generator class="guid.comb" />
+        </id>
+        <property name="Name" />
+        <list name="Addresses" table="CustomerAddress">
+            <key column="CustomerId" />
+            <index column="AddressIndex" />
+            <composite-element class="Address">
+                <property name="AddressLine1" />
+                <property name="AddressLine2" />
+                <property name="City" />
+                <property name="PostalCode" />
+            </composite-element>
+        </list>
+        <set name="Tags" table="CustomerTag">
+            <key column="CustomerId" />
+            <element column="Tag" type="string" />
+        </set>
+    </class>
+</hibernate-mapping>

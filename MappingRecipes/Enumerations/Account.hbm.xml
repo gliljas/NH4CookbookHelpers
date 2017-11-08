@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="MappingRecipes"
+                   namespace="MappingRecipes.Enumerations">
+    <class name="Account">
+        <id name="Id">
+            <generator class="guid.comb" />
+        </id>
+        <natural-id>
+            <property name="Number" />
+        </natural-id>
+        <property name="Name" not-null="true" />
+        <property name="AcctType"
+                  type="NHibernate.Type.EnumStringType`1[[MappingRecipes.Enumerations.AccountTypes, MappingRecipes]], NHibernate" />
+    </class>
+</hibernate-mapping>

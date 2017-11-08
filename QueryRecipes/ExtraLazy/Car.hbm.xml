@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    assembly="QueryRecipes"
+    namespace="QueryRecipes.ExtraLazy">
+  <class name="Car">
+    <id name="Id">
+      <generator class="native" />
+    </id>
+    <property name="Make" />
+    <property name="Model" />
+    <set name="Accessories" table="CarAccessories" lazy="extra" cascade="all">
+      <key column="CarId"/>
+      <many-to-many class="Accessory" column="AccessoryId"/>
+    </set>
+  </class>
+  <class name="Accessory">
+    <id name="Id">
+      <generator class="native" />
+    </id>
+    <property name="Name" />
+  </class>
+</hibernate-mapping>

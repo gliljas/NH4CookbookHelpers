@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="MappingRecipes"
+                   namespace="MappingRecipes.MappingSubselects">
+    <class name="PageHit">
+        <id name="Id">
+            <generator class="native" />
+        </id>
+        <property name="Url" not-null="true" />
+    </class>
+    <class name="PageStatisticsEntry" mutable="false">
+        <subselect>
+            SELECT Url, COUNT(*) as ViewCount
+            FROM PageHit GROUP BY Url
+        </subselect>
+        <synchronize table="PageHit" />
+        <id name="Url" />
+        <property name="ViewCount" />
+    </class>
+</hibernate-mapping>

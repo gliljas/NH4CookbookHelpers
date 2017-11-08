@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+    <class entity-name="Product"
+           discriminator-value="Product">
+        <id name="Id" type="Guid">
+            <generator class="guid.comb" />
+        </id>
+        <discriminator column="ProductType" type="String" />
+        <natural-id mutable="true">
+            <property name="Name" not-null="true"
+                      type="String" />
+        </natural-id>
+        <version name="Version" type="Int32"/>
+        <property name="Description" type="String" />
+        <property name="UnitPrice" not-null="true"
+                  type="Currency" />
+    </class>
+</hibernate-mapping>

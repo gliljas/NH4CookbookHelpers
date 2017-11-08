@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NH4CookbookHelpers", "NHCookbookHelpers\NH4CookbookHelpers.csproj", "{B54AA97C-9442-42D9-BECE-CB54A54FE923}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eg.Core", "Eg.Core\Eg.Core.csproj", "{D2D22714-04EA-4FA2-96E2-5D37326FE887}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryRecipes", "QueryRecipes\QueryRecipes.csproj", "{88E50C6A-F8BF-41DA-B654-D9BF6525B482}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionPerPresenter", "SessionPerPresenter\SessionPerPresenter.csproj", "{883BBBBA-467F-472E-93C1-29CBA4521278}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{F50F52E6-26EB-41F9-883E-58F926658BFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionRecipes", "SessionRecipes\SessionRecipes.csproj", "{6DB737D2-4C26-407D-ABF8-B042080205CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MappingRecipes", "MappingRecipes\MappingRecipes.csproj", "{A229FE46-10AF-421E-A9D9-21ED6B5415A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B54AA97C-9442-42D9-BECE-CB54A54FE923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B54AA97C-9442-42D9-BECE-CB54A54FE923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B54AA97C-9442-42D9-BECE-CB54A54FE923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B54AA97C-9442-42D9-BECE-CB54A54FE923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2D22714-04EA-4FA2-96E2-5D37326FE887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2D22714-04EA-4FA2-96E2-5D37326FE887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2D22714-04EA-4FA2-96E2-5D37326FE887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2D22714-04EA-4FA2-96E2-5D37326FE887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88E50C6A-F8BF-41DA-B654-D9BF6525B482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88E50C6A-F8BF-41DA-B654-D9BF6525B482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88E50C6A-F8BF-41DA-B654-D9BF6525B482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88E50C6A-F8BF-41DA-B654-D9BF6525B482}.Release|Any CPU.Build.0 = Release|Any CPU
+		{883BBBBA-467F-472E-93C1-29CBA4521278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{883BBBBA-467F-472E-93C1-29CBA4521278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{883BBBBA-467F-472E-93C1-29CBA4521278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{883BBBBA-467F-472E-93C1-29CBA4521278}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F50F52E6-26EB-41F9-883E-58F926658BFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F50F52E6-26EB-41F9-883E-58F926658BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F50F52E6-26EB-41F9-883E-58F926658BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F50F52E6-26EB-41F9-883E-58F926658BFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DB737D2-4C26-407D-ABF8-B042080205CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB737D2-4C26-407D-ABF8-B042080205CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB737D2-4C26-407D-ABF8-B042080205CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB737D2-4C26-407D-ABF8-B042080205CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A229FE46-10AF-421E-A9D9-21ED6B5415A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A229FE46-10AF-421E-A9D9-21ED6B5415A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A229FE46-10AF-421E-A9D9-21ED6B5415A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A229FE46-10AF-421E-A9D9-21ED6B5415A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90666A6C-EA70-4774-B8CF-B74569B9BBA3}
+	EndGlobalSection
+EndGlobal

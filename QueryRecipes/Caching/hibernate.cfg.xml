@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+    <session-factory>
+        <property name="cache.provider_class">
+            NHibernate.Caches.SysCache.SysCacheProvider,
+            NHibernate.Caches.SysCache
+        </property>
+        <property name="cache.use_second_level_cache">
+            true
+        </property>
+        <property name="cache.use_query_cache">
+            true
+        </property>
+        <class-cache class="NH4CookbookHelpers.Queries.Model.Product,NH4CookbookHelpers"
+    region="hourly" usage="read-write"/>
+        <class-cache class="NH4CookbookHelpers.Queries.Model.ActorRole,NH4CookbookHelpers"
+        region="hourly" usage="read-write"/>
+        <collection-cache collection="NH4CookbookHelpers.Queries.Model.Movie.Actors"
+        region="hourly" usage="read-write"/>
+    </session-factory>
+</hibernate-configuration>

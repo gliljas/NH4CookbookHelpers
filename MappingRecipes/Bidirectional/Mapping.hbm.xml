@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="MappingRecipes"
+                   namespace="MappingRecipes.Bidirectional">
+    <class name="OrderItem">
+        <id name="Id">
+            <generator class="guid.comb" />
+        </id>
+        <property name="Name" />
+        <many-to-one name="Order" column="OrderId" />
+    </class>
+    <class name="Order" table="`Order`">
+        <id name="Id">
+            <generator class="guid.comb" />
+        </id>
+        <set name="Items"
+             cascade="all-delete-orphan"
+             inverse="true"
+             access="field.camelcase-underscore">
+            <key column="OrderId" />
+            <one-to-many class="OrderItem" />
+        </set>
+        <set name="Projects"
+             inverse="true"
+             access="field.camelcase-underscore"
+             table="OrderProject">
+            <key column="OrderId" />
+            <many-to-many class="Project" column="ProjectId" />
+        </set>
+    </class>
+    <class name="Project" table="Project">
+        <id name="Id">
+            <generator class="guid.comb" />
+        </id>
+        <set name="Orders"
+             access="field.camelcase-underscore"
+             table="OrderProject">
+            <key column="ProjectId" />
+            <many-to-many class="Order" column="OrderId" />
+        </set>
+    </class>
+</hibernate-mapping>

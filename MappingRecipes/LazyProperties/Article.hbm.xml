@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="MappingRecipes"
+                   namespace="MappingRecipes.LazyProperties">
+    <class name="Article" proxy="false">
+        <id name="Id">
+            <generator class="native" />
+        </id>
+        <property name="Title" />
+        <property name="Abstract" />
+        <property name="Author" />
+        <property name="FullText" lazy="true" />
+    </class>
+</hibernate-mapping>

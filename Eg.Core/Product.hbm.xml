@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Eg.Core"
+                   namespace="Eg.Core">
+    <class name="Product">
+        <id name="Id">
+            <generator class="guid.comb" />
+        </id>
+
+        <discriminator column="ProductType" />
+
+        <natural-id mutable="true">
+            <property name="Name" not-null="true" />
+        </natural-id>
+
+        <property name="Description" />
+        <property name="UnitPrice" not-null="true"
+                  type="Currency" />
+
+    </class>
+    <subclass name="Book" extends="Product">
+        <property name="Author" />
+        <property name="ISBN" />
+    </subclass>
+    <subclass name="Movie" extends="Product">
+        <property name="Director" />
+        <list name="Actors" cascade="all-delete-orphan">
+            <key column="MovieId" not-null="true" update="false" />
+            <index column="ActorIndex" />
+            <one-to-many class="ActorRole" />
+        </list>
+    </subclass>
+
+
+</hibernate-mapping>
