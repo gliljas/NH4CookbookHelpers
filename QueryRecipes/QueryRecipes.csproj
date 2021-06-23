@@ -1,151 +1,54 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{88E50C6A-F8BF-41DA-B654-D9BF6525B482}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>QueryRecipes</RootNamespace>
-    <AssemblyName>QueryRecipes</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <TargetFramework>net40</TargetFramework>
+    <AssemblyTitle>QueryRecipes</AssemblyTitle>
+    <Product>QueryRecipes</Product>
+    <Copyright>Copyright ©  2016</Copyright>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.5\lib\net40-full\log4net.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="NHibernate.Caches.SysCache, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=6876f2ea66c9f443, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHibernate.Caches.SysCache.4.0.0.4000\lib\net40\NHibernate.Caches.SysCache.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="NHibernate.CollectionQuery, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHibernate.CollectionQuery.1.0.0.1\lib\net40-Client\NHibernate.CollectionQuery.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="NHibernate.Shards, Version=4.0.1.3001, Culture=neutral, PublicKeyToken=6b499c9282a516d4, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHibernate.Shards.4.0.1.3001\lib\net40\NHibernate.Shards.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.SQLite, Version=1.0.102.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SQLite.Core.1.0.102.0\lib\net40\System.Data.SQLite.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
+    <PackageReference Include="Iesi.Collections" Version="4.0.0.4000" />
+    <PackageReference Include="log4net" Version="2.0.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="8.0.3" />
+    <PackageReference Include="NH4CookbookHelpers" Version="0.0.1-unstable" />
+    <PackageReference Include="NHibernate" Version="4.0.4.4000" />
+    <PackageReference Include="NHibernate.Caches.SysCache" Version="4.0.0.4000" />
+    <PackageReference Include="NHibernate.CollectionQuery" Version="1.0.0.1" />
+    <PackageReference Include="NHibernate.Shards" Version="4.0.1.3001" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.114.3" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdvancedEagerLoading\Recipe.cs" />
-    <Compile Include="CachingWithCode\Recipe.cs" />
-    <Compile Include="Caching\Recipe.cs" />
-    <Compile Include="CollectionFilters\Recipe.cs" />
-    <Compile Include="DetachedQueries\Recipe.cs" />
-    <Compile Include="EagerLoadingWithQueryOver\Recipe.cs" />
-    <Compile Include="EagerLoadingWithCriteria\Recipe.cs" />
-    <Compile Include="EagerLoadingWithLinq\Recipe.cs" />
-    <Compile Include="EagerLoadingWithHql\Recipe.cs" />
-    <Compile Include="EagerLoadingWithSql\Recipe.cs" />
-    <Compile Include="ExtraLazy\Accessory.cs" />
-    <Compile Include="ExtraLazy\Car.cs" />
-    <Compile Include="ExtraLazy\Recipe.cs" />
-    <Compile Include="Futures\PageOf.cs" />
-    <Compile Include="Futures\Queries.cs" />
-    <Compile Include="Futures\Recipe.cs" />
-    <Compile Include="HqlBulkChanges\Recipe.cs" />
-    <Compile Include="MultiQueries\PageOf.cs" />
-    <Compile Include="MultiQueries\Queries.cs" />
-    <Compile Include="MultiQueries\Recipe.cs" />
-    <Compile Include="MultiCriteria\PageOf.cs" />
-    <Compile Include="MultiCriteria\Queries.cs" />
-    <Compile Include="MultiCriteria\Recipe.cs" />
-    <Compile Include="NamedQueries\Recipe.cs" />
-    <Compile Include="NamedQueries\NamedQueries.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QueryByCriteria\CriteriaQueries.cs" />
-    <Compile Include="QueryByCriteria\Recipe.cs" />
-    <Compile Include="QueryByHql\HqlQueries.cs" />
-    <Compile Include="QueryByHql\Recipe.cs" />
-    <Compile Include="QueryById\Recipe.cs" />
-    <Compile Include="QueryByLinq\LinqQueries.cs" />
-    <Compile Include="QueryByLinq\Recipe.cs" />
-    <Compile Include="QueryByQueryOver\QueryOverQueries.cs" />
-    <Compile Include="QueryByQueryOver\Recipe.cs" />
-    <Compile Include="QueryBySql\Recipe.cs" />
-    <Compile Include="QueryBySql\SqlQueries.cs" />
-    <Compile Include="QueryOverProjections\QueryOverAggregateQueries.cs" />
-    <Compile Include="QueryOverProjections\Recipe.cs" />
-    <Compile Include="ReadOnly\Recipe.cs" />
-    <Compile Include="ResultTransformers\AliasToJObjectTransformer.cs" />
-    <Compile Include="ResultTransformers\BookInfo.cs" />
-    <Compile Include="ResultTransformers\Recipe.cs" />
-    <Compile Include="Sharding\Recipe.cs" />
-    <Compile Include="Sharding\ShardedProduct.cs" />
-    <Compile Include="Sharding\ShardStrategyFactory.cs" />
-    <Compile Include="Stateless\Recipe.cs" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="Sharding\ShardedProduct.hbm.xml" />
-    <EmbeddedResource Include="Properties\Resources.resx">
+    <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
+    <Compile Update="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="app.config" />
     <Content Include="Caching\hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Settings.Designer.cs">
+    <Compile Update="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -158,27 +61,6 @@
     <EmbeddedResource Include="ExtraLazy\Car.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <ProjectReference Include="..\NHCookbookHelpers\NH4CookbookHelpers.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NHCookbookHelpers\NH4CookbookHelpers.csproj">
-      <Project>{b54aa97c-9442-42d9-bece-cb54a54fe923}</Project>
-      <Name>NH4CookbookHelpers</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\System.Data.SQLite.Core.1.0.102.0\build\net40\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.102.0\build\net40\System.Data.SQLite.Core.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.102.0\build\net40\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.102.0\build\net40\System.Data.SQLite.Core.targets'))" />
-  </Target>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

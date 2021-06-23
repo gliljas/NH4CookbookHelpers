@@ -14,12 +14,7 @@ namespace MappingRecipes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //RecipeLoader.DefaultConfiguration = new Configuration().DataBaseIntegration(db =>
-            //{
-            //    db.Dialect<PostgreSQL82Dialect>();
-            //    db.Driver<NpgsqlDriver>();
-            //    db.ConnectionString = "Server=localhost;Database=NHCookbook;User Id=cookbook;Password = cookbook; ";
-            //});
+           
             Application.Run(new WindowsFormsRunner());
         }
     }
