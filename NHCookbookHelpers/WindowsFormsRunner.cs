@@ -1,15 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using log4net;
-using log4net.Layout;
-using log4net.Repository.Hierarchy;
 
 namespace NH4CookbookHelpers
 {

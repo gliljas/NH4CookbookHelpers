@@ -3,7 +3,7 @@
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
                    assembly="MappingRecipes"
                    namespace="MappingRecipes.LazyProperties">
-    <class name="Article" proxy="false">
+    <class name="Article">
         <id name="Id">
             <generator class="native" />
         </id>

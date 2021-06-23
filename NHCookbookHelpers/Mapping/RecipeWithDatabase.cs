@@ -32,7 +32,7 @@ namespace NH4CookbookHelpers.Mapping
                 db.Dialect<SQLiteDialect>();
                 db.Driver<SQLite20Driver>();
                 db.ConnectionProvider<SharedConnectionConnectionProvider>();
-                db.ConnectionString = "FullUri=file:memorydb.db";
+                db.ConnectionString = "FullUri=file:memorydb.db;BinaryGUID=false";
             });
             nhConfig.DataBaseIntegration(db =>
             {

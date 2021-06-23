@@ -52,7 +52,7 @@ namespace NH4CookbookHelpers.Model
                  {
                      db.Dialect<SQLiteDialect>();
                      db.Driver<SQLite20Driver>();
-                     db.ConnectionString = "FullUri=file:memorydb.db?mode=memory&cache=shared";
+                     db.ConnectionString = "FullUri=file:memorydb.db?mode=memory&cache=shared;BinaryGUID=false";
                      db.ConnectionProvider<KeepOneConnectionAliveConnectionProvider>();
                  }
              });
