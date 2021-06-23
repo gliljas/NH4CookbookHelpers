@@ -32,17 +32,17 @@ public class NeedsPersistenceAttribute
         ActionExecutedContext filterContext)
     {
             
-        var tx = session.Transaction;
+        var tx = session.GetCurrentTransaction();
         if (tx != null && tx.IsActive)
         {
             var noUnhandledException = filterContext.Exception == null || filterContext.ExceptionHandled;
             if (noUnhandledException && filterContext.Controller.ViewData.ModelState.IsValid)
             {
-                session.Transaction.Commit();
+                session.GetCurrentTransaction().Commit();
             }
             else
             {
-                session.Transaction.Rollback();
+                session.GetCurrentTransaction().Rollback();
             }
         }
             

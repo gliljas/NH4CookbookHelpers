@@ -17,7 +17,7 @@ namespace NH4CookbookHelpers
 
         public ICache BuildCache(string regionName, IDictionary<string, string> properties)
         {
-            return new LoggingCache(_innerProvider.BuildCache(regionName,properties));
+            return new LoggingCache(_innerProvider.BuildCache(regionName,properties) as CacheBase);
         }
 
         public long NextTimestamp()

@@ -143,8 +143,8 @@ namespace NH4CookbookHelpers.Mapping
     public class SharedConnectionConnectionProvider : DriverConnectionProvider
     {
         [ThreadStatic]
-        private static IDbConnection _sharedConnection = null;
-        public override IDbConnection GetConnection()
+        private static DbConnection _sharedConnection = null;
+        public override DbConnection GetConnection()
         {
             if (_sharedConnection == null)
             {
@@ -153,7 +153,7 @@ namespace NH4CookbookHelpers.Mapping
             return _sharedConnection;
         }
 
-        public override void CloseConnection(IDbConnection conn)
+        public override void CloseConnection(DbConnection conn)
         {
            
         }

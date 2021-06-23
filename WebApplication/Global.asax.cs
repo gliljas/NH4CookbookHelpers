@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Web;
+﻿using NH4CookbookHelpers.Model;
+using NHibernate;
+using System;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using NH4CookbookHelpers.Model;
-using NHibernate;
-using NHibernate.Cfg;
-using NHibernate.Context;
-using NHibernate.Dialect;
 
 namespace ActionFilterExample
 {

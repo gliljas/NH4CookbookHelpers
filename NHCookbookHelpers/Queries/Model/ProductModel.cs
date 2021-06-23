@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.Common;
 using System.IO;
 using NHibernate;
 using NHibernate.Cfg;
@@ -73,8 +74,8 @@ namespace NH4CookbookHelpers.Model
 
         public class KeepOneConnectionAliveConnectionProvider : DriverConnectionProvider
         {
-            private IDbConnection _sharedConnection = null;
-            public override IDbConnection GetConnection()
+            private DbConnection _sharedConnection = null;
+            public override DbConnection GetConnection()
             {
                 if (_sharedConnection == null)
                 {
